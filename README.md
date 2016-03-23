@@ -1,4 +1,5 @@
-# cmsc434doodler
+# CMSC434Doodler
+### Android 1
 A quick android project for my UX design course at University of Maryland, College Park
 
 ## Details

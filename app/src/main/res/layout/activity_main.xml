@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.sarah.cmsc434doodler.MainActivity">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_columnSpan="4" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Undo"
+            android:id="@+id/button"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:layout_gravity="fill_horizontal|center"
+            android:onClick="undo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="       Color"
+            android:id="@+id/textView3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:layout_gravity="center"
+            android:layout_columnSpan="2" />
+
+        <Button
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Redo"
+            android:id="@+id/button2"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal|center"
+            android:onClick="redo"/>
+
+        <Button
+            android:layout_width="60px"
+            android:layout_height="60px"
+            android:id="@+id/currentColor"
+            android:layout_row="0"
+            android:layout_column="3"
+            android:background="#000000"
+            android:layout_columnSpan="1"
+            android:singleLine="true"
+            android:clickable="true"
+            android:layout_gravity="center|right" />
+
+        <com.example.sarah.cmsc434doodler.DoodleView
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:id="@+id/view"
+            android:layout_alignParentBottom="true"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:layout_columnSpan="4"
+            android:layout_rowSpan="1"
+            android:layout_gravity="top|bottom|right|fill" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:text="Random"
+            android:id="@+id/buttonRandomColor"
+            android:layout_row="5"
+            android:layout_column="3"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:typeface="sans"
+            android:onClick="randomColor"/>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="50px"
+            android:text="Erase"
+            android:id="@+id/buttonErase"
+            android:layout_row="10"
+            android:layout_column="0"
+            android:onClick="eraseCanvas"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnSpan="4"
+            android:textColor="#000000"
+            android:background="#dddddd"
+            android:singleLine="false"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Color Picker"
+            android:id="@+id/textView4"
+            android:layout_row="3"
+            android:layout_column="1"
+            android:layout_columnSpan="2"
+            android:layout_gravity="center" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="4"
+            android:layout_column="1" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:text="Red"
+            android:id="@+id/buttonRed"
+            android:layout_row="5"
+            android:layout_column="0"
+            android:layout_gravity="fill_horizontal"
+            android:onClick="changeColor"
+            android:background="#ff0000"
+            android:typeface="sans"
+            android:layout_columnSpan="1" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="6"
+            android:layout_column="0"
+            android:layout_columnSpan="4" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:text="Green"
+            android:id="@+id/buttonGreen"
+            android:layout_row="5"
+            android:layout_column="1"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnSpan="1"
+            android:onClick="changeColor"
+            android:background="#2bff00"
+            android:typeface="sans" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="70px"
+            android:text="Blue"
+            android:id="@+id/buttonBlue"
+            android:layout_row="5"
+            android:layout_column="2"
+            android:layout_gravity="fill_horizontal"
+            android:layout_columnSpan="1"
+            android:onClick="changeColor"
+            android:background="#0022ff"
+            android:typeface="sans" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Opacity"
+            android:id="@+id/textView"
+            android:layout_row="7"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:textColor="#000000" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarOpacity"
+            android:layout_row="7"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal|center"
+            android:progress="255"
+            android:max="255"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Brush Size"
+            android:id="@+id/textView2"
+            android:layout_row="8"
+            android:layout_column="0"
+            android:layout_gravity="center"
+            android:textColor="#000000" />
+
+        <Space
+            android:layout_width="20px"
+            android:layout_height="20px"
+            android:layout_row="9"
+            android:layout_column="0"
+            android:layout_columnSpan="4" />
+
+        <SeekBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/seekBarBrushSize"
+            android:layout_row="8"
+            android:layout_column="1"
+            android:layout_columnSpan="3"
+            android:layout_gravity="fill_horizontal|center"
+            android:progress="5"
+            android:max="50"/>
+    </GridLayout>
+</RelativeLayout>
